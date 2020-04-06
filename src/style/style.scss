@@ -146,6 +146,7 @@ p {
 @media (max-width: 767px) {
   .main {
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     min-height: inherit;
   }
 
