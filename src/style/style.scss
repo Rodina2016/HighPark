@@ -1,0 +1,176 @@
+$accent-main: #3768C1;
+$accent-main-dark: #2352A9;
+$accent-second: #E15295;
+$bg: #fff;
+$font: rgba(255,255,255,.6);
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 8px 0;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 49px;
+  text-align: center;
+}
+
+.sidebar {
+  position: relative;
+  width: 476px;
+  min-height: 820px;
+  padding: 45px 38px;
+  background-color: $accent-main;
+  box-sizing: border-box;
+  color: $font;
+
+  &-contacts {
+    &__item {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    &__name {
+      color: $bg;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    &__tel {
+      margin-right: 8px;
+      &:link,
+      &:active,
+      &:visited {
+        color: $bg;
+        text-decoration: none;
+      }
+    }
+
+    &__mail {
+      display: inline-block;
+      padding: 0 8px;
+      background-color: $accent-second;
+      &:link,
+      &:active,
+      &:visited {
+        color: $bg;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-decor {
+    position: absolute;
+    bottom: 0;
+    right: -81px;
+    height: 162px;
+    width: 162px;
+    margin-top: 25px;
+    background-color: $accent-main-dark;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -55px;
+      bottom: 0;
+      width: 163px;
+      height: 110px;
+      background-color: $accent-main;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 64px;
+      bottom: 0;
+      width: 163px;
+      height: 80px;
+      background-color: $accent-second;
+      z-index: 10;
+    }
+
+  }
+}
+
+.logo-highpark {
+  padding: 0 25px;
+  margin-top: 20%;
+  text-align: center;
+}
+
+.soon {
+  margin-top: 140px;
+  padding: 0 25px;
+  text-align: center;
+
+  &__img {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .soon {
+   width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    flex-wrap: wrap;
+    min-height: inherit;
+  }
+
+  .logo {
+    padding: 0 24px;
+    margin-bottom: 35px;
+  }
+
+  .sidebar {
+    padding: 24px 16px;
+    width: 100%;
+    min-height: inherit;
+  }
+
+  .logo-highpark {
+    margin-top: 70px;
+  }
+
+  .soon {
+    width: 150px;
+    margin: 45px auto 0;
+  }
+
+  .soon__img {
+    margin-left: 0;
+  }
+}
+
